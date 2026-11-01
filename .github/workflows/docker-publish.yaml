@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  
+
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: test-flask
-  AWS_ROLE_ARN: arn:aws:iam::255945442255:role/deepan
+  AWS_ROLE_ARN:   AWS_ROLE_ARN: arn:aws:iam::255945442255:role/deepan
 
 jobs:
   build-and-push:

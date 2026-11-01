@@ -48,3 +48,8 @@ variable "github_oidc_role_name" {
 output "github_oidc_role_arn" {
   value = aws_iam_role.github_oidc.arn
 }
+
+resource "aws_iam_role_policy_attachment" "ecr_push" {
+  role       = aws_iam_role.github_oidc.name
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPowerUser"
+}
